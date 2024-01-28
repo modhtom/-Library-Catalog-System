@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Spinner?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox alignment="TOP_CENTER" layoutY="2.0" prefHeight="386.0" prefWidth="200.0" spacing="10.0" style="-fx-background-color: #ffffff; -fx-border-width: 2px; -fx-border-color: blue;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.librarysystem.customerpage.showcart.BookCardCart">
+
+    <children>
+        <ImageView fx:id="bookimg" fitHeight="195.0" fitWidth="178.0" pickOnBounds="true" preserveRatio="true" />
+        <Label fx:id="bookName" alignment="CENTER" prefHeight="26.0" prefWidth="194.0" text="Name">
+            <font>
+                <Font name="System Bold" size="16.0" />
+            </font>
+        </Label>
+        <Label fx:id="bookCategory" alignment="CENTER" prefHeight="18.0" prefWidth="192.0" text="Categoy" />
+        <Label fx:id="bookprice" alignment="CENTER" prefHeight="18.0" prefWidth="91.0" text="\$price" />
+      <HBox alignment="CENTER" prefHeight="38.0" prefWidth="195.0" spacing="20.0">
+         <children>
+            <Label text="Quantity" />
+            <Spinner fx:id="bookQuantity" prefHeight="6.0" prefWidth="116.0" />
+         </children>
+         <VBox.margin>
+            <Insets left="5.0" />
+         </VBox.margin>
+      </HBox>
+      <Button fx:id="removeBook_btn" mnemonicParsing="false" onAction="#removeBook" text="Remove from cart" />
+    </children>
+
+</VBox>

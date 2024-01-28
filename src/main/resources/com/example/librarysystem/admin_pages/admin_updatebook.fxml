@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.Spinner?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.librarysystem.adminpage.AdminUpdateBook">
+
+    <children>
+        <HBox prefHeight="720.0" prefWidth="1280.0" style="-fx-background-color: #176B87;">
+            <children>
+                <StackPane prefHeight="720.0" prefWidth="525.0" style="-fx-background-color: #176B87;">
+                    <children>
+                        <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" spacing="10.0">
+                            <children>
+                                <ImageView fitHeight="101.0" fitWidth="355.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@../../../../imgs/logo.png" />
+                                    </image>
+                                </ImageView>
+                                <ImageView fitHeight="247.0" fitWidth="259.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@../../../../imgs/admin_sidebar.png" />
+                                    </image>
+                                </ImageView>
+                                <Label prefHeight="100.0" prefWidth="142.0" text="Hi !" textFill="WHITE">
+                                    <font>
+                                        <Font name="System Bold" size="48.0" />
+                                    </font></Label>
+                                <Label fx:id="admin_name" prefHeight="94.0" prefWidth="346.0" text="Label" textFill="#fff8f8">
+                                    <font>
+                                        <Font name="System Bold Italic" size="37.0" />
+                                    </font></Label>
+                                <Separator orientation="VERTICAL" prefHeight="142.0" prefWidth="0.0" />
+                                <Button fx:id="logout_btn" alignment="CENTER" mnemonicParsing="false" onAction="#onLogOut" text="Log out" textAlignment="RIGHT">
+                                    <font>
+                                        <Font size="18.0" />
+                                    </font>
+                                    <VBox.margin>
+                                        <Insets bottom="10.0" />
+                                    </VBox.margin>
+                                </Button>
+                            </children>
+                        </VBox>
+                    </children>
+                </StackPane>
+                <StackPane prefHeight="720.0" prefWidth="1116.0" style="-fx-background-color: #ffffff; -fx-background-radius: 10 10 10 10; -fx-background-insets: 0 , 8;">
+                    <children>
+                        <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
+                            <children>
+                                <HBox alignment="TOP_CENTER" prefHeight="114.0" prefWidth="926.0">
+                                    <children>
+                                        <ImageView fitHeight="46.0" fitWidth="43.0" pickOnBounds="true" preserveRatio="true">
+                                            <image>
+                                                <Image url="@../../../../imgs/editlogo.png" />
+                                            </image>
+                                            <HBox.margin>
+                                                <Insets right="5.0" top="25.0" />
+                                            </HBox.margin>
+                                        </ImageView>
+                                        <Label prefHeight="76.0" prefWidth="242.0" text="Update Book">
+                                            <font>
+                                                <Font name="Oswald Medium" size="32.0" />
+                                            </font>
+                                            <HBox.margin>
+                                                <Insets top="10.0" />
+                                            </HBox.margin>
+                                        </Label>
+                                    </children>
+                                    <VBox.margin>
+                                        <Insets />
+                                    </VBox.margin>
+                                </HBox>
+                                <Separator orientation="VERTICAL" prefHeight="56.0" prefWidth="11.0" />
+                                <VBox prefHeight="304.0" prefWidth="926.0" style="-fx-border-color: #176B87; -fx-border-width: 2px;">
+                                    <children>
+                                        <TableView fx:id="bookTable" prefHeight="273.0" prefWidth="921.0">
+                                            <columns>
+                                                <TableColumn fx:id="bookID_col" prefWidth="118.39998805522919" text="Book ID" />
+                                                <TableColumn fx:id="bookTitle_column" minWidth="0.0" prefWidth="162.40005493164062" text="Book Name" />
+                                                <TableColumn fx:id="bookCategory_col" prefWidth="153.60003662109375" text="Book Category" />
+                                                <TableColumn fx:id="bookAuthor_col" prefWidth="152.7999267578125" text="Author Name" />
+                                    <TableColumn fx:id="bookPrice_col" prefWidth="145.60009765625" text="Price" />
+                                    <TableColumn fx:id="bookStock_col" prefWidth="98.4000244140625" text="Stock" />
+                                    <TableColumn fx:id="bookAvailable_col" prefWidth="90.4000244140625" text="Available" />
+                                            </columns>
+                                        </TableView>
+                                    </children>
+                                </VBox>
+                                <VBox alignment="CENTER" prefHeight="325.0" prefWidth="926.0">
+                                    <children>
+                                        <HBox alignment="CENTER" prefHeight="55.0" prefWidth="926.0" spacing="35.0">
+                                            <children>
+                                                <Label text="Enter Book ID you want to update" />
+                                                <TextField fx:id="bookID_update_field" />
+                                                <Button fx:id="update_btn" mnemonicParsing="false" onAction="#onUpdate" prefHeight="46.0" prefWidth="110.0" text="Update" />
+                                            </children>
+                                            <VBox.margin>
+                                                <Insets top="10.0" />
+                                            </VBox.margin>
+                                        </HBox>
+                              <Separator orientation="VERTICAL" prefHeight="64.0" prefWidth="47.0">
+                                 <VBox.margin>
+                                    <Insets bottom="10.0" left="10.0" top="10.0" />
+                                 </VBox.margin>
+                              </Separator>
+                              <VBox fx:id="update_VBOX" prefHeight="278.0" prefWidth="926.0">
+                                 <children>
+                                    <GridPane prefHeight="204.0" prefWidth="926.0">
+                                       <columnConstraints>
+                                          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                       </columnConstraints>
+                                       <rowConstraints>
+                                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                       </rowConstraints>
+                                       <children>
+                                          <VBox prefHeight="128.0" prefWidth="290.0">
+                                             <children>
+                                                <Label prefHeight="18.0" prefWidth="125.0" text="Book Name" />
+                                                <TextField fx:id="updatedname_input" maxWidth="250.0" prefHeight="26.0" prefWidth="200.0" />
+                                             </children>
+                                          </VBox>
+                                          <VBox prefHeight="128.0" prefWidth="297.0" GridPane.rowIndex="1">
+                                             <children>
+                                                <Label prefHeight="18.0" prefWidth="94.0" text="Category" />
+                                                <ComboBox fx:id="updatedCategory_combobox" prefWidth="150.0" />
+                                             </children>
+                                          </VBox>
+                                          <VBox prefHeight="128.0" prefWidth="338.0" GridPane.columnIndex="1">
+                                             <children>
+                                                <Label prefHeight="18.0" prefWidth="126.0" text="Author name" />
+                                                <TextField fx:id="updatedauthor_input" maxWidth="250.0" />
+                                             </children>
+                                          </VBox>
+                                          <Label GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                          <VBox prefHeight="200.0" prefWidth="100.0" GridPane.rowIndex="2">
+                                             <children>
+                                                <Label text="Stock" />
+                                                <Spinner fx:id="updatedStock_spinner" />
+                                             </children>
+                                          </VBox>
+                                          <VBox prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                                             <children>
+                                                <Label text="Availability" />
+                                                <ComboBox fx:id="updatedAvailability_combobox" prefWidth="150.0" />
+                                             </children>
+                                          </VBox>
+                                          <VBox prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                             <children>
+                                                <Label text="Price" />
+                                                <Spinner fx:id="updatedPrice_spinner" />
+                                             </children>
+                                          </VBox>
+                                       </children>
+                                    </GridPane>
+                                    <VBox alignment="CENTER" prefHeight="81.0" prefWidth="926.0">
+                                       <children>
+                                          <Button fx:id="confirm_update_btn" mnemonicParsing="false" onAction="#onConfirmUpdate" prefHeight="26.0" prefWidth="178.0" text="Confirm Update" />
+                                       </children>
+                                    </VBox>
+                                 </children>
+                              </VBox>
+                                    </children>
+                                </VBox>
+                                <AnchorPane prefHeight="83.0" prefWidth="428.0">
+                                    <children>
+                                        <Button fx:id="back_btn" layoutX="838.0" layoutY="14.0" mnemonicParsing="false" onAction="#onBack" prefHeight="26.0" prefWidth="62.0" text="Back" />
+                                    </children>
+                                </AnchorPane>
+                            </children>
+                            <StackPane.margin>
+                                <Insets left="10.0" />
+                            </StackPane.margin>
+                        </VBox>
+                    </children>
+                </StackPane>
+            </children>
+        </HBox>
+    </children>
+
+</AnchorPane>

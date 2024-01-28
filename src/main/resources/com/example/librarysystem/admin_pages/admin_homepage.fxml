@@ -1,0 +1,347 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.RadialGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.librarysystem.adminpage.AdminHomepage">
+
+    <children>
+        <HBox prefHeight="720.0" prefWidth="1280.0" style="-fx-background-color: #176B87;">
+            <children>
+                <StackPane prefHeight="720.0" prefWidth="525.0" style="-fx-background-color: #176B87;">
+                    <children>
+                        <VBox alignment="CENTER" prefHeight="720.0" prefWidth="302.0" spacing="10.0">
+                            <children>
+                                <ImageView fitHeight="101.0" fitWidth="355.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@../../../../imgs/logo.png" />
+                                    </image>
+                                </ImageView>
+                                <ImageView fitHeight="247.0" fitWidth="259.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@../../../../imgs/admin_sidebar.png" />
+                                    </image>
+                                </ImageView>
+                                <Label prefHeight="100.0" prefWidth="142.0" text="Hi !" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="48.0" />
+                           </font></Label>
+                                <Label fx:id="admin_name" prefHeight="94.0" prefWidth="256.0" text="Label" textFill="#fff2f2">
+                           <font>
+                              <Font name="System Bold Italic" size="25.0" />
+                           </font></Label>
+                                <Separator orientation="VERTICAL" prefHeight="142.0" prefWidth="0.0" />
+                                <Button fx:id="logout_btn" alignment="CENTER" mnemonicParsing="false" onAction="#onLogOut" text="Log out" textAlignment="RIGHT">
+                                    <font>
+                                        <Font size="18.0" />
+                                    </font>
+                                    <VBox.margin>
+                                        <Insets bottom="10.0" />
+                                    </VBox.margin>
+                                </Button>
+                            </children>
+                        </VBox>
+                    </children>
+                </StackPane>
+                <StackPane prefHeight="720.0" prefWidth="1297.0" style="-fx-background-color: #ffffff; -fx-background-radius: 10 10 10 10; -fx-background-insets: 0 , 8;">
+               <children>
+                  <GridPane alignment="CENTER" prefHeight="720.0" prefWidth="975.0">
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <ImageView fitHeight="235.0" fitWidth="309.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../../imgs/adminhome2.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="238.0" fitWidth="466.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1">
+                           <image>
+                              <Image url="@../../../../imgs/adminhome1.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="227.0" fitWidth="311.0" pickOnBounds="true" GridPane.columnIndex="2">
+                           <image>
+                              <Image url="@../../../../imgs/adminhome3.png" />
+                           </image>
+                        </ImageView>
+                        <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="1">
+                           <children>
+                              <Button fx:id="addBook_btn" alignment="CENTER" contentDisplay="CENTER" layoutX="74.0" layoutY="54.0" mnemonicParsing="false" onAction="#onAddBook" style="-fx-background-color: #ffffff; -fx-border-width: 1px; -fx-border-color: #000000;" text="Add Book" textAlignment="CENTER">
+                                 <font>
+                                    <Font name="System Bold" size="32.0" />
+                                 </font>
+                                 <effect>
+                                    <InnerShadow height="0.0" radius="0.0" width="0.0">
+                                       <color>
+                                          <Color opacity="0.15881459414958954" />
+                                       </color>
+                                       <input>
+                                          <DropShadow blurType="ONE_PASS_BOX" height="4.62" radius="38.0725" width="149.67" />
+                                       </input>
+                                    </InnerShadow>
+                                 </effect>
+                                 <textFill>
+                                    <LinearGradient endX="0.7348484848484849" startX="0.17045454093904205">
+                                       <stops>
+                                          <Stop>
+                                             <color>
+                                                <Color />
+                                             </color>
+                                          </Stop>
+                                          <Stop offset="1.0">
+                                             <color>
+                                                <Color red="0.2518518567085266" green="0.5386419892311096" blue="1.0" />
+                                             </color>
+                                          </Stop>
+                                       </stops>
+                                    </LinearGradient>
+                                 </textFill>
+                              </Button>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="2">
+                           <children>
+                              <Button fx:id="addborrower_btn" alignment="CENTER" contentDisplay="CENTER" layoutX="55.0" layoutY="58.0" mnemonicParsing="false" onAction="#onAddBorrower" style="-fx-background-color: #ffffff; -fx-border-width: 1px; -fx-border-color: #000000;" text="Add Borrower" textAlignment="CENTER">
+                                 <font>
+                                    <Font name="System Bold" size="29.0" />
+                                 </font>
+                                 <effect>
+                                    <InnerShadow height="0.0" radius="0.0" width="0.0">
+                                       <color>
+                                          <Color opacity="0.15881459414958954" />
+                                       </color>
+                                       <input>
+                                          <DropShadow blurType="ONE_PASS_BOX" height="4.62" radius="38.0725" width="149.67" />
+                                       </input>
+                                    </InnerShadow>
+                                 </effect>
+                                 <textFill>
+                                    <LinearGradient endX="0.7348484848484849" endY="0.6818182540662361" startX="0.7689393966486959">
+                                       <stops>
+                                          <Stop>
+                                             <color>
+                                                <Color />
+                                             </color>
+                                          </Stop>
+                                          <Stop offset="1.0">
+                                             <color>
+                                                <Color red="0.1120000034570694" green="0.5138000249862671" blue="0.699999988079071" opacity="0.9148935675621033" />
+                                             </color>
+                                          </Stop>
+                                       </stops>
+                                    </LinearGradient>
+                                 </textFill>
+                              </Button>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                           <children>
+                              <Button fx:id="updatebook_btn" alignment="CENTER" contentDisplay="CENTER" layoutX="62.0" layoutY="58.0" mnemonicParsing="false" onAction="#onUpdateBook" style="-fx-background-color: #ffffff; -fx-border-width: 1px; -fx-border-color: #000000;" text="Update Book" textAlignment="CENTER">
+                                 <font>
+                                    <Font name="System Bold" size="29.0" />
+                                 </font>
+                                 <effect>
+                                    <InnerShadow height="0.0" radius="0.0" width="0.0">
+                                       <color>
+                                          <Color opacity="0.15881459414958954" />
+                                       </color>
+                                       <input>
+                                          <DropShadow blurType="ONE_PASS_BOX" height="4.62" radius="38.0725" width="149.67" />
+                                       </input>
+                                    </InnerShadow>
+                                 </effect>
+                                 <textFill>
+                                    <LinearGradient endX="0.7348484848484849" startX="0.17045454093904205">
+                                       <stops>
+                                          <Stop>
+                                             <color>
+                                                <Color />
+                                             </color>
+                                          </Stop>
+                                          <Stop offset="1.0">
+                                             <color>
+                                                <Color red="0.2518518567085266" green="0.5386419892311096" blue="1.0" />
+                                             </color>
+                                          </Stop>
+                                       </stops>
+                                    </LinearGradient>
+                                 </textFill>
+                              </Button>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                           <children>
+                              <Button fx:id="updateborrower_btn" alignment="CENTER" contentDisplay="CENTER" layoutX="33.0" layoutY="58.0" mnemonicParsing="false" onAction="#onUpdateBorrower" style="-fx-background-color: #ffffff; -fx-border-width: 1px; -fx-border-color: #000000;" text="Update Borrower" textAlignment="CENTER">
+                                 <font>
+                                    <Font name="System Bold" size="29.0" />
+                                 </font>
+                                 <effect>
+                                    <InnerShadow height="0.0" radius="0.0" width="0.0">
+                                       <color>
+                                          <Color opacity="0.15881459414958954" />
+                                       </color>
+                                       <input>
+                                          <DropShadow blurType="ONE_PASS_BOX" height="4.62" radius="38.0725" width="149.67" />
+                                       </input>
+                                    </InnerShadow>
+                                 </effect>
+                                 <textFill>
+                                    <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
+                                       <stops>
+                                          <Stop>
+                                             <color>
+                                                <Color />
+                                             </color>
+                                          </Stop>
+                                          <Stop offset="1.0">
+                                             <color>
+                                                <Color red="0.1120000034570694" green="0.5138000249862671" blue="0.699999988079071" opacity="0.9148935675621033" />
+                                             </color>
+                                          </Stop>
+                                       </stops>
+                                    </RadialGradient>
+                                 </textFill>
+                              </Button>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                           <children>
+                              <Button fx:id="removebook_btn" alignment="CENTER" contentDisplay="CENTER" layoutX="57.0" layoutY="58.0" mnemonicParsing="false" onAction="#onDeleteBook" style="-fx-background-color: #ffffff; -fx-border-width: 1px; -fx-border-color: #000000;" text="Remove Book" textAlignment="CENTER">
+                                 <font>
+                                    <Font name="System Bold" size="29.0" />
+                                 </font>
+                                 <effect>
+                                    <InnerShadow height="0.0" radius="0.0" width="0.0">
+                                       <color>
+                                          <Color opacity="0.15881459414958954" />
+                                       </color>
+                                       <input>
+                                          <DropShadow blurType="ONE_PASS_BOX" height="4.62" radius="38.0725" width="149.67" />
+                                       </input>
+                                    </InnerShadow>
+                                 </effect>
+                                 <textFill>
+                                    <LinearGradient endX="0.7348484848484849" startX="0.17045454093904205">
+                                       <stops>
+                                          <Stop>
+                                             <color>
+                                                <Color />
+                                             </color>
+                                          </Stop>
+                                          <Stop offset="1.0">
+                                             <color>
+                                                <Color red="0.2518518567085266" green="0.5386419892311096" blue="1.0" />
+                                             </color>
+                                          </Stop>
+                                       </stops>
+                                    </LinearGradient>
+                                 </textFill>
+                              </Button>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="2">
+                           <children>
+                              <Button fx:id="removeborrower_btn" alignment="CENTER" contentDisplay="CENTER" layoutX="33.0" layoutY="58.0" mnemonicParsing="false" onAction="#onDeleteBorrower" prefHeight="64.0" prefWidth="275.0" style="-fx-background-color: #ffffff; -fx-border-width: 1px; -fx-border-color: #000000;" text="Remove Borrower" textAlignment="CENTER">
+                                 <font>
+                                    <Font name="System Bold" size="23.0" />
+                                 </font>
+                                 <effect>
+                                    <InnerShadow height="0.0" radius="0.0" width="0.0">
+                                       <color>
+                                          <Color opacity="0.15881459414958954" />
+                                       </color>
+                                       <input>
+                                          <DropShadow blurType="ONE_PASS_BOX" height="4.62" radius="38.0725" width="149.67" />
+                                       </input>
+                                    </InnerShadow>
+                                 </effect>
+                                 <textFill>
+                                    <LinearGradient endX="0.7348484848484849" endY="1.0" startX="0.7689393966486959" startY="0.6164772727272726">
+                                       <stops>
+                                          <Stop>
+                                             <color>
+                                                <Color />
+                                             </color>
+                                          </Stop>
+                                          <Stop offset="1.0">
+                                             <color>
+                                                <Color red="0.1120000034570694" green="0.5138000249862671" blue="0.699999988079071" opacity="0.9148935675621033" />
+                                             </color>
+                                          </Stop>
+                                       </stops>
+                                    </LinearGradient>
+                                 </textFill>
+                              </Button>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                           <children>
+                              <Button fx:id="returnBook_btn" alignment="CENTER" contentDisplay="CENTER" layoutX="33.0" layoutY="58.0" mnemonicParsing="false" onAction="#onReturnBook" prefHeight="64.0" prefWidth="275.0" style="-fx-background-color: #ffffff; -fx-border-width: 1px; -fx-border-color: #000000;" text="Return Book" textAlignment="CENTER">
+                                 <font>
+                                    <Font name="System Bold" size="29.0" />
+                                 </font>
+                                 <effect>
+                                    <InnerShadow height="0.0" radius="0.0" width="0.0">
+                                       <color>
+                                          <Color opacity="0.15881459414958954" />
+                                       </color>
+                                       <input>
+                                          <DropShadow blurType="ONE_PASS_BOX" height="4.62" radius="38.0725" width="149.67" />
+                                       </input>
+                                    </InnerShadow>
+                                 </effect>
+                                 <textFill>
+                                    <RadialGradient centerX="0.7665929203539821" centerY="0.5" radius="0.5">
+                                       <stops>
+                                          <Stop>
+                                             <color>
+                                                <Color />
+                                             </color>
+                                          </Stop>
+                                          <Stop offset="1.0">
+                                             <color>
+                                                <Color red="0.557894766330719" green="0.4016842246055603" blue="0.03719298169016838" opacity="0.9100000262260437" />
+                                             </color>
+                                          </Stop>
+                                       </stops>
+                                    </RadialGradient>
+                                 </textFill>
+                              </Button>
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </GridPane>
+               </children>
+                </StackPane>
+            </children>
+        </HBox>
+    </children>
+
+</AnchorPane>

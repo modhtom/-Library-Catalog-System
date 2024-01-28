@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox alignment="TOP_CENTER" layoutY="2.0" prefHeight="235.0" prefWidth="200.0" spacing="10.0" style="-fx-background-color: #ffffff; -fx-border-width: 2px; -fx-border-color: blue;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.librarysystem.customerpage.showorders.CustomerOrderCard">
+
+    <children>
+      <Label fx:id="orderNumber_Label" text="Order Number">
+         <font>
+            <Font name="System Bold" size="26.0" />
+         </font>
+      </Label>
+        <Label fx:id="orderID_label" alignment="CENTER" prefHeight="26.0" prefWidth="194.0" text="#OrderID">
+            <font>
+                <Font name="System Bold" size="17.0" />
+            </font>
+        </Label>
+        <Label fx:id="totalPrice_label" alignment="CENTER" prefHeight="18.0" prefWidth="192.0" text="\$TotalPrice">
+         <font>
+            <Font name="System Bold" size="17.0" />
+         </font></Label>
+        <Label fx:id="orderDate_label" alignment="CENTER" prefHeight="26.0" prefWidth="196.0" text="Order Date">
+         <font>
+            <Font name="System Bold" size="17.0" />
+         </font></Label>
+        <Button fx:id="viewBooksOfOrder_btn" mnemonicParsing="false" onAction="#viewBookOrder" style="-fx-background-color: #000000;" text="View Books" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font></Button>
+    </children>
+   <padding>
+      <Insets top="15.0" />
+   </padding>
+
+</VBox>
